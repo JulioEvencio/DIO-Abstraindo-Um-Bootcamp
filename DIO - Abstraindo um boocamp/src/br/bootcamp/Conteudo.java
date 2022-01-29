@@ -1,25 +1,19 @@
 package br.bootcamp;
 
-public class Conteudo {
+public abstract class Conteudo {
 
-    private String nome;
+    protected static final double XP_PADRAO = 10d;
+    private String titulo;
     private String descricao;
-    private double xp;
-    private double cargaHoraria;
 
-    public Conteudo(String nome, String descricao, double xp, double cargaHoraria) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.xp = xp;
-        this.cargaHoraria = cargaHoraria;
+    public abstract double calcularXp();
+
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getDescricao() {
@@ -28,22 +22,6 @@ public class Conteudo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public double getXp() {
-        return xp;
-    }
-
-    public void setXp(double xp) {
-        this.xp = xp;
-    }
-
-    public double getCargaHoraria() {
-        return cargaHoraria;
-    }
-
-    public void setCargaHoraria(double cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
     }
 
 }
